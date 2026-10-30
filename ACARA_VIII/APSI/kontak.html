@@ -26,18 +26,58 @@
 <a class="social-link" href="https://www.linkedin.com/company/great-giant-pineapple/ " target="_blank" rel="noopener noreferrer">in <span>LinkedIn</span></a>
 <a class="social-link" href="https://youtube.com/@greatgiantfoods5543?si=guZfSa10VzE3I3BM/" target="_blank" rel="noopener noreferrer">▶ <span>YouTube</span></a>
 </div></div></div>
-<form class="contact-form" id="contact-form" action="https://formsubmit.co/saifurrizal146@gmail.com" method="POST">
-<h2>Kirim Pesan kepada Kami</h2><p>Sampaikan pertanyaan, saran, atau kebutuhan informasi Anda melalui formulir kontak yang tersedia. Pesan Anda akan diteruskan ke email perusahaan setelah sistem dikonfigurasi.</p>
-<input type="hidden" name="_subject" value="Pesan baru dari website PT GGLC Dairy Operation">
-<input type="hidden" name="_template" value="table"><input type="hidden" name="_captcha" value="true">
-<input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
-<label for="name">Nama</label><input id="name" name="name" type="text" placeholder="Nama Anda" autocomplete="name" required>
-<label for="email">Email balasan</label><input id="email" name="email" type="email" placeholder="nama@email.com" autocomplete="email" required>
-<label for="subject">Subjek</label><input id="subject" name="subject" type="text" placeholder="Topik pesan" required>
-<label for="message">Pesan</label><textarea id="message" name="message" rows="5" placeholder="Tulis pesan Anda..." required></textarea>
-<button class="button button-primary form-submit" type="submit">Kirim pesan <span aria-hidden="true">→</span></button>
-<p class="form-feedback" id="form-feedback" aria-live="polite">Silakan isi formulir dengan informasi yang sesuai agar kami dapat memahami kebutuhan Anda dengan lebih baik.</p>
-</form></div></section>
+
+<form class="contact-form" id="contact-form" onsubmit="kirimWhatsApp(event)">
+
+<h2>Kirim Pesan kepada Kami</h2>
+
+<p>Sampaikan pertanyaan, saran, atau kebutuhan informasi Anda melalui formulir berikut. Pesan akan diarahkan langsung ke WhatsApp kami.</p>
+
+<label for="name">Nama</label>
+<input id="name" name="name" type="text" placeholder="Nama Anda" required>
+
+<label for="email">Email balasan</label>
+<input id="email" name="email" type="email" placeholder="nama@email.com" required>
+
+<label for="subject">Subjek</label>
+<input id="subject" name="subject" type="text" placeholder="Topik pesan" required>
+
+<label for="message">Pesan</label>
+<textarea id="message" name="message" rows="5" placeholder="Tulis pesan Anda..." required></textarea>
+
+<button class="button button-primary form-submit" type="submit">
+Kirim ke WhatsApp →
+</button>
+
+</form>
+
+<script>
+function kirimWhatsApp(event) {
+    event.preventDefault();
+
+    const nama = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const subjek = document.getElementById("subject").value;
+    const pesan = document.getElementById("message").value;
+
+    const nomorWhatsApp = "6282334219745";
+
+    const teks = 
+`Halo, saya ingin menghubungi PT GGLC Dairy Operation.
+
+Nama: ${nama}
+Email: ${email}
+Subjek: ${subjek}
+
+Pesan:
+${pesan}`;
+
+    const url = "https://wa.me/" + nomorWhatsApp + "?text=" + encodeURIComponent(teks);
+
+    window.open(url, "_blank");
+}
+</script>
+
 <section class="section section-soft"><div class="container"><div class="section-heading"><span class="eyebrow">TEMUKAN KAMI</span><h2>Lokasi Perusahaan</h2><p>Temukan lokasi PT GGLC Dairy Operation melalui peta di bawah ini untuk memperoleh gambaran lokasi perusahaan dan memudahkan perjalanan menuju tempat kami.</p></div>
 <div class="map-card"><iframe title="Peta pencarian lokasi PT GGLC Dairy Operation" src="https://maps.google.com/maps?q=PT%20GGLC%20Dairy%20Operation&t=&z=13&ie=UTF8&iwloc=&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
 <div class="map-footer"><span>Alamat resmi PT Great Giant Livestock</span><a class="button button-outline" href="https://www.google.com/maps/search/?api=1&query=PT+GGLC+Dairy+Operation" target="_blank" rel="noopener noreferrer">Buka Google Maps ↗</a></div></div></div></section>
