@@ -48,12 +48,14 @@ Kirim ke WhatsApp →
 
 </form>
 
+</div>
+</section>
+
 <script>
 function kirimWhatsApp(event) {
     event.preventDefault();
 
     const nama = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
     const subjek = document.getElementById("subject").value;
     const pesan = document.getElementById("message").value;
 
@@ -63,7 +65,6 @@ function kirimWhatsApp(event) {
 `Halo, saya ingin menghubungi PT GGLC Dairy Operation.
 
 Nama: ${nama}
-Email: ${email}
 Subjek: ${subjek}
 
 Pesan:
@@ -75,9 +76,38 @@ ${pesan}`;
 }
 </script>
 
-<section class="section section-soft"><div class="container"><div class="section-heading"><span class="eyebrow">TEMUKAN KAMI</span><h2>Lokasi Perusahaan</h2><p>Temukan lokasi PT GGLC Dairy Operation melalui peta di bawah ini untuk memperoleh gambaran lokasi perusahaan dan memudahkan perjalanan menuju tempat kami.</p></div>
-<div class="map-card"><iframe title="Peta pencarian lokasi PT GGLC Dairy Operation" src="https://maps.google.com/maps?q=PT%20GGLC%20Dairy%20Operation&t=&z=13&ie=UTF8&iwloc=&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
-<div class="map-footer"><span>Alamat resmi PT Great Giant Livestock</span><a class="button button-outline" href="https://www.google.com/maps/search/?api=1&query=PT+GGLC+Dairy+Operation" target="_blank" rel="noopener noreferrer">Buka Google Maps ↗</a></div></div></div></section>
+<section class="section section-soft">
+
+    <!-- Judul lokasi -->
+    <div class="container">
+        <div class="section-heading">
+            <span class="eyebrow">TEMUKAN KAMI</span>
+            <h2>Lokasi Perusahaan</h2>
+            <p>Temukan lokasi PT GGLC Dairy Operation melalui peta di bawah ini untuk memperoleh gambaran lokasi perusahaan dan memudahkan perjalanan menuju tempat kami.</p>
+        </div>
+    </div>
+
+    <!-- Peta di luar container -->
+    <div class="map-card map-wide">
+        <iframe
+            title="Peta pencarian lokasi PT GGLC Dairy Operation"
+            src="https://maps.google.com/maps?q=PT%20GGLC%20Dairy%20Operation&t=&z=13&ie=UTF8&iwloc=&output=embed"
+            loading="lazy"
+            allowfullscreen>
+        </iframe>
+
+        <div class="map-footer">
+            <span>Alamat resmi PT Great Giant Livestock</span>
+            <a class="button button-outline"
+               href="https://www.google.com/maps/search/?api=1&query=PT+GGLC+Dairy+Operation"
+               target="_blank"
+               rel="noopener noreferrer">
+               Buka Google Maps ↗
+            </a>
+        </div>
+    </div>
+
+</section>
 </main>
 <footer class="site-footer"><div class="container footer-inner"><a class="brand brand-footer" href="index.html"><img class="brand-mark" src="assets/images/Logo GGLC.png" alt="Logo PT GGLC"><span class="brand-text"><strong>PT GGLC</strong><small>Dairy Operation</small></span></a><p>© <span data-year></span> PT GGLC Dairy Operation. Berkomitmen pada Kualitas dan Keunggulan.</p><a href="kontak.html">Kontak</a></div></footer>
 </body></html>
